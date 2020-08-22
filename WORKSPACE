@@ -170,6 +170,12 @@ http_archive(
 )
 
 new_local_repository(
+    name = "jetson_opencv",
+    build_file = "@//third_party:opencv_jetson.BUILD",
+    path = "/usr",
+)
+
+new_local_repository(
     name = "linux_opencv",
     build_file = "@//third_party:opencv_linux.BUILD",
     path = "/usr",
